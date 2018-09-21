@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="LoginFormHelperWidget.widget.LoginFormHelperWidget" needsEntityContext="false" offlineCapable="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>Login form helper widget</name>
+    <description>Login form helper widget</description>
+
+    <icon />
+
+    <properties>
+        <property key="containerClass" type="string" defaultValue="mx-name-containerLogin">
+            <caption>Container class</caption>
+            <category>Configuration</category>
+            <description>The class of the container that contains the login widgets. Prefix with mx-name- to use the name of the container instead.</description>
+        </property>
+        <property key="userNameCaseConversion" type="enumeration" defaultValue="none">
+            <caption>Transform user name</caption>
+            <category>Configuration</category>
+            <description>Transform user name to lower- or uppercase</description>
+            <enumerationValues>
+                <enumerationValue key="none">None</enumerationValue>
+                <enumerationValue key="lower">Lower case</enumerationValue>
+                <enumerationValue key="upper">Upper case</enumerationValue>
+            </enumerationValues>
+        </property>
+        <property key="loginOnEnter" type="boolean" defaultValue="false">
+            <caption>Login on enter</caption>
+            <category>Configuration</category>
+            <description></description>
+        </property>
+        <property key="loginButtonClass" type="string" required="false">
+            <caption>Login button class</caption>
+            <category>Configuration</category>
+            <description>Optional. The class of the login button. When no class is specified, any button will be targeted</description>
+        </property>
+
+    </properties>
+</widget>
