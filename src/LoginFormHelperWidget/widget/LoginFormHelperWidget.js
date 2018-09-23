@@ -8,16 +8,15 @@ define([
     "dojo/query",
     "dojo/on",
     "dojo/keys",
-    "dojo/_base/lang"
+    "dojo/dom-prop"
 
 
-], function (declare, _WidgetBase, dojoQuery, dojoOn, dojoKeys, lang) {
+], function (declare, _WidgetBase, dojoQuery, dojoOn, dojoKeys, dojoProp) {
     "use strict";
 
     return declare("LoginFormHelperWidget.widget.LoginFormHelperWidget", [ _WidgetBase ], {
 
         // Parameters configured in the Modeler.
-        containerClass: "",
         userNameCaseConversion: "",
         loginOnEnter: "",
         loginButtonClass: "",
@@ -35,8 +34,12 @@ define([
         postCreate: function () {
             logger.debug(this.id + ".postCreate");
             var thisObj = this;
+            var containerSelector;
+
+            containerSelector = this.domNode.parentNode.tagName;
+            containerSelector += "." + dojoProp.get(this.domNode.parentNode, "class").replace(/\s/g, ".");
             if (this.userNameCaseConversion !== this.TRANSFORM_NONE) {
-            dojoQuery("div." + this.containerClass + " input[type=text]").on("blur", function (e) {
+            dojoQuery(containerSelector + " input[type=text]").on("blur", function (e) {
                 if (this.value) {
                     switch (thisObj.userNameCaseConversion) {
                         case thisObj.TRANSFORM_LOWER:
@@ -54,9 +57,9 @@ define([
                 });
             }
             if (this.loginOnEnter) {
-                dojoQuery("div." + this.containerClass + " input").on( "keyup", function (e) {
+                dojoQuery(containerSelector + " input").on( "keyup", function (e) {
                     if (event.keyCode === dojoKeys.ENTER) {
-                        var buttonQuery = "div." + thisObj.containerClass + " .btn.mx-button";
+                        var buttonQuery = containerSelector + " .btn.mx-button";
                         if (thisObj.loginButtonClass) {
                             buttonQuery += "." + thisObj.loginButtonClass;
                         }

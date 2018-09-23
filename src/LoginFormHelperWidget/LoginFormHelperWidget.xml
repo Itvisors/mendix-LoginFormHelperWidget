@@ -6,12 +6,7 @@
     <icon />
 
     <properties>
-        <property key="containerClass" type="string" defaultValue="mx-name-containerLogin">
-            <caption>Container class</caption>
-            <category>Configuration</category>
-            <description>The class of the container that contains the login widgets. Prefix with mx-name- to use the name of the container instead.</description>
-        </property>
-        <property key="userNameCaseConversion" type="enumeration" defaultValue="none">
+        <property key="userNameCaseConversion" type="enumeration" defaultValue="lower">
             <caption>Transform user name</caption>
             <category>Configuration</category>
             <description>Transform user name to lower- or uppercase</description>
@@ -21,7 +16,7 @@
                 <enumerationValue key="upper">Upper case</enumerationValue>
             </enumerationValues>
         </property>
-        <property key="loginOnEnter" type="boolean" defaultValue="false">
+        <property key="loginOnEnter" type="boolean" defaultValue="true">
             <caption>Login on enter</caption>
             <category>Configuration</category>
             <description></description>
