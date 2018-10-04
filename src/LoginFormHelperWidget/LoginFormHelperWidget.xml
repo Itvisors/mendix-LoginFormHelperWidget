@@ -3,7 +3,7 @@
     <name>Login form helper widget</name>
     <description>Login form helper widget</description>
 
-    <icon />
+    <icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiCRkHEg20U3CmAAAA+UlEQVQoz13RTStEYRQH8B+jLGwspETKRoatsvAJ7O2mrG5iahaSUlh4X7Ije68bFnZ8AUp5iZmlGTXfgCbUYzHmzp17ntXpd/qfUw9Tim6Na1aHJa+quurtk2BOyUQ8cCAIlhvttUjZbDzSpyY4bAaOKYlU4pRFQbAFpj3UR4oiH+YV9TgSBN9WrfnxWE8Z9SZSkbUutLyFxqKsVyM2WrBmT3vzlm6bCbxUMKClthJ8LCNV2wk+MZTmnQSf6vepkOTdBJ/JIOdXvsEzvpT/+TzenfPjRi/cm9TmWXChI5F7KXjRyYm8QdUU0+1OsMKwK+/WUlz/9oL9PyU9by5JjqyeAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTA5LTI1VDA3OjE4OjEzKzAyOjAwS33iJwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wOS0yNVQwNzoxODoxMyswMjowMDogWpsAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC</icon>
 
     <properties>
         <property key="userNameCaseConversion" type="enumeration" defaultValue="lower">
