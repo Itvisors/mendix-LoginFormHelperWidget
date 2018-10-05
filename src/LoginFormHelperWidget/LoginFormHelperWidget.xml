@@ -16,6 +16,11 @@
                 <enumerationValue key="upper">Upper case</enumerationValue>
             </enumerationValues>
         </property>
+        <property key="trimUserName" type="boolean" defaultValue="false">
+            <caption>Trim user name</caption>
+            <category>Configuration</category>
+            <description></description>
+        </property>
         <property key="loginOnEnter" type="boolean" defaultValue="true">
             <caption>Login on enter</caption>
             <category>Configuration</category>
@@ -25,6 +30,20 @@
             <caption>Login button class</caption>
             <category>Configuration</category>
             <description>Optional. The class of the login button. When no class is specified, any button will be targeted</description>
+        </property>
+        <property key="allowRememberUserName" type="boolean" defaultValue="false">
+            <caption>Allow remember user name</caption>
+            <category>Configuration</category>
+            <description>Allow user name to be stored in a cookie</description>
+        </property>
+        <property key="rememberUserNameCaption" type="translatableString">
+            <caption>Remember caption</caption>
+            <category>Configuration</category>
+            <description>Caption to be shown next to tickbox for remembering the user name, translatable</description>
+            <translations>
+                <translation lang="en_US">Remember user name</translation>
+                <translation lang="nl_NL">Onthou gebruikersnaam</translation>
+            </translations>
         </property>
 
     </properties>
