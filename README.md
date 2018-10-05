@@ -4,6 +4,8 @@ This widget adds features to the Mendix 7 login widgets:
 
 * Transform user name to lower or upper case
 * Login on enter
+* Remember the user name in a cookie
+* Trim the user name
 
 Place the login widgets and this widget in the same container. Note that the login widgets can be in nested containers or tables; the widget will find them.
 
