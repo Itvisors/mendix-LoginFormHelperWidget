@@ -48,32 +48,31 @@ define([
             containerSelector = this.domNode.parentNode.tagName;
             containerSelector += "." + dojoProp.get(this.domNode.parentNode, "class").replace(/\s/g, ".");
 
-            // Case conversion for user name?
-            if (this.userNameCaseConversion !== this.TRANSFORM_NONE) {
-                dojoQuery(containerSelector + " input[type=text]").on("blur", function (e) {
-                    if (this.value) {
-                        switch (thisObj.userNameCaseConversion) {
-                            case thisObj.TRANSFORM_LOWER:
-                                this.value = this.value.toLowerCase();
-                                break;
+            // Add blur (focus lost) event handler
+            dojoQuery(containerSelector + " input[type=text]").on("blur", function (e) {
+                if (this.value) {
+                    // Case conversion for user name?
+                    switch (thisObj.userNameCaseConversion) {
+                        case thisObj.TRANSFORM_LOWER:
+                            this.value = this.value.toLowerCase();
+                            break;
 
-                            case thisObj.TRANSFORM_UPPER:
-                                this.value = this.value.toUpperCase();
-                                break;
+                        case thisObj.TRANSFORM_UPPER:
+                            this.value = this.value.toUpperCase();
+                            break;
 
-                            default:
-                                break;
-                        }
-                        if (thisObj.trimUserName) {
-                            this.value = this.value.trim();
-                        }
-                        thisObj._userName = this.value;
-                    } else {
-                        thisObj._userName = null;
+                        default:
+                            break;
                     }
-                    thisObj.saveUserNameToCookie();
-                });
-            }
+                    if (thisObj.trimUserName) {
+                        this.value = this.value.trim();
+                    }
+                    thisObj._userName = this.value;
+                } else {
+                    thisObj._userName = null;
+                }
+                thisObj.saveUserNameToCookie();
+            });
 
             // Login on enter?
             if (this.loginOnEnter) {
@@ -127,7 +126,7 @@ define([
 
         saveUserNameToCookie: function () {
             if (this._saveUserNameToCookieAllowed) {
-                dojoCookie(this.COOKIE_NAME, this._userName, { expires: 90 });
+                dojoCookie(this.COOKIE_NAME, (this._userName) ? this._userName : "", { expires: 90 });
             } else {
                 dojoCookie(this.COOKIE_NAME, "", { expires: 0 });
             }
