@@ -1,6 +1,6 @@
 /*jshint undef: true, browser:true, nomen: true */
 /*jslint browser:true, nomen: true */
-/*global mx, mxui, define, require, console, logger */
+/*global mx, mxui, define, require, console */
 define([
     "dojo/_base/declare",
     "mxui/widget/_WidgetBase",
@@ -40,7 +40,7 @@ define([
         },
 
         postCreate: function () {
-            logger.debug(this.id + ".postCreate");
+            mx.logger.debug(this.id + ".postCreate");
             var thisObj = this,
                 containerSelector,
                 checkboxNode;
@@ -133,7 +133,7 @@ define([
         },
 
         uninitialize: function () {
-            logger.debug(this.id + ".uninitialize");
+            mx.logger.debug(this.id + ".uninitialize");
         }
     });
 });
