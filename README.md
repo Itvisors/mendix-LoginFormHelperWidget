@@ -1,6 +1,6 @@
 # Login form helper widget
 
-This widget adds features to the Mendix 7 login widgets:
+This widget adds features to the Mendix login widgets:
 
 * Transform user name to lower or upper case
 * Login on enter
