@@ -40,7 +40,7 @@ define([
         },
 
         postCreate: function () {
-            mx.logger.debug(this.id + ".postCreate");
+            console.log(this.id + ".postCreate");
             var thisObj = this,
                 containerSelector,
                 checkboxNode;
@@ -133,7 +133,7 @@ define([
         },
 
         uninitialize: function () {
-            mx.logger.debug(this.id + ".uninitialize");
+            console.log(this.id + ".uninitialize");
         }
     });
 });
